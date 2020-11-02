@@ -156,4 +156,4 @@ SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
 
  #whitenoise
- STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
