@@ -1,0 +1,92 @@
+ 
+
+
+ {% extends 'base.html' %}
+
+ 
+ {% load static %}
+
+ {% block content %}
+
+ <!--   {% for x in plans %}
+
+        <h1>{{x.name}}</h1>
+        {% for y in x.features.all %}
+            <h3>{{y.enable}}</h3>
+        {% endfor %}
+
+   {% endfor %}
+ -->
+
+    <div class="text-center" style="padding-top: 150px;">
+        
+        <h1 data-aos="fade-up" data-aos-duration="600"><bold>Precios que se adaptan a tus necesidades</bold></h1>
+        <p class="mt-3 text-secondary"data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">Para que cualquier entrenador pueda tecnologizar su negocio sufriendo lo menos posible.</p>
+        
+        <div class="row justify-content-center mt-5 pt-5">
+
+            <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="900" href = "{% url 'plans' %}" class="plan-select {% if plan == 'anual' %} plan-select-inactive {%endif%}">
+                <h5>Paga mensualmente</h5>
+            </a>
+
+            <a data-aos="fade-up" data-aos-duration="600" data-aos-delay="1300" href = "{% url 'anual_plans' "anual" %}" class="plan-select {% if plan != 'anual' %} plan-select-inactive {%endif%}">
+                <h5>Paga anualmente</h5>
+                <p>y ahorra un 10%</p>
+            </a>
+
+
+        </div>
+
+        <div class="row mt-5 pt-3 justify-content-center align-items-stretch">
+            {% for x in plans %}
+            
+        
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-4" data-aos="fade-up" data-aos-delay="1500">
+
+                <div class = "plan {% if x.highlight %} plan-highlighted {%endif%} d-flex flex-column justify-content-between">
+                    <div>
+                        <h2>{% if x.contact %} Contacta{%else%} {% if plan != 'anual' %}   {{x.price}}€  <span>/mes</span>  {% else %} {{x.price_anual}}€ <span>/año</span> {% endif %} {%endif%}</h2>
+                        
+                        {% if x.contact == False %}
+                            <h4>Hasta {{x.max_peaple}} clientes a la vez</h4>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="contenedor">
+                        <ul class="p-0 mt-5 text-left mb-4">
+
+                            {% for y in x.features.all %}
+                            <li class="list-unstyled p-0 d-flex align-items-center mt-4" >
+                                
+                                
+                                    <img class="{% if y.enable %}  tick {% else %} cross  {% endif %}" src="{% if y.enable %} {% static 'images/icons/tick.svg' %} {% else %} {% static 'images/icons/cross.svg'%} {% endif %}" width="100%"/>
+
+                
+                                <p class=" ml-3">{{y.feature.text}}</p>
+                            
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+
+
+
+                    </div>
+
+                    <a class="boton1 text-center d-flex justify-content-center text-decoration-none ">
+                        <div >
+                            Comprar
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+        </div>
+
+
+    </div>
+
+ {% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+ 
+{% load static %}
+
+{% block content %}
+
+    <!-- presentacion del equipo -->
+
+    <div class="row justify-content-center align-items-center" style="padding-top: 150px;"> 
+
+        <div class="col-lg-6 col-md-6" data-aos="zoom-out" data-aos-duration="1000">
+
+            <img src="{% static '/images/team.jpeg' %}" style="border-radius: 20px; object-fit:cover !important;" width="100%" height="500px"/>
+
+        </div>
+
+        <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+            <h1 class="mb-3" data-aos="fade-up" data-aos-delay="500"><bold>Nuestro equipo</bold></h1>
+            <p class="text-secondary" data-aos="fade-up" data-aos-delay="1000">
+
+                Somos un grupo de jovenes emprendedores expertos en todas las materias relevantes
+                dentro de el desarrollo de un negocio online. Detrás de un buen producto siempre existe
+                un buen equipo trabajando por el. Por eso queremos que nos conozcais.
+
+
+            </p>
+            
+
+        </div>
+
+    </div>  
+
+
+    <!-- DIFERENTES MIEMBROS DEL MISMO EQUIPO -->
+
+    {% for x in team_members %}
+
+        {% if x.order|divisibleby:2 == True %}
+        <div class="row mt-5 pt-5">
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-duration="600">
+
+                <img width="100%" src="{{ x.image.url }}" style="border-radius: 20px; object-fit:cover !important;" height="450px"></img>
+            </div>
+
+
+            <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-duration="600">
+
+                <h2 class="mt-4" style="font-weight: 600;">{{ x.name}} </h2>
+                <h5 class="text-secondary mt-2">{{ x.rol }}</h5>
+                <p class="text-secondary mt-3">
+
+                    {{ x.description }}
+
+                </p>
+            </div>
+
+
+        </div>
+        
+        {% else %}
+
+        <div class="row mt-5 pt-5" >
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-duration="600">
+
+                <h2 class="mt-4" style="font-weight: 600;">{{ x.name}} </h2>
+                <h5 class="text-secondary mt-2">{{ x.rol }}</h5>
+                <p class="text-secondary mt-3 mb-4 mb-md-0">
+
+                    {{ x.description }}
+
+                </p>
+            </div>
+            <div class="col-md-6 text-center " data-aos="fade-up" data-aos-duration="600">
+
+                <img width="100%" src="{{ x.image.url }}" style="border-radius: 20px; object-fit:cover !important;"  height="450px"></img>
+            
+            </div>
+
+
+
+
+        </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+
+
+{% endblock %}

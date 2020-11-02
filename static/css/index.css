@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins" !important;
+  background-color: #f5f5f5;
+  overflow-x: hidden !important;
+}
+
+p {
+  color: dark !important;
+  margin: 0 !important;
+}
+
+h1 {
+  color: dark !important;
+  margin: 0 !important;
+}
+
+h2 {
+  color: dark !important;
+  margin: 0 !important;
+}
+
+h3 {
+  color: dark !important;
+  margin: 0 !important;
+}
+
+h4 {
+  color: dark !important;
+  margin: 0 !important;
+}
+
+h5 {
+  color: dark !important;
+  margin: 0 !important;
+}
+
+bold {
+  font-weight: 600 !important;
+}
+
+.text-secondary {
+  color: #636363;
+}
+
+#header {
+  animation: 1s all linear;
+  position: absolute;
+}
+
+.boton1 {
+  padding: 12px 23px;
+  background-color: #ffc800;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600 !important;
+  display: flex;
+  max-width: fit-content;
+}
+
+.boton2 {
+  padding: 12px 23px;
+  background-color: #ffd43846;
+  color: #ffc800;
+  border-radius: 5px;
+  font-weight: 600;
+  display: flex;
+  max-width: fit-content;
+}
+
+.nav-header {
+  margin-right: 50px !important;
+}
+
+.nav-header-active {
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffc800 !important;
+}
+
+.card {
+  background-color: white !important;
+  border: 0px solid white;
+  border-radius: 20px;
+}
+
+.card-icon {
+  background-color: #ffc800;
+  border-radius: 50%;
+  padding: 10px;
+  width: 49px;
+}
+
+.image-card {
+  border-radius: 13px 13px 0px 13px;
+  background-color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-top: 50px;
+  z-index: 10;
+}
+.image-card h5 {
+  color: #4b4b4b !important;
+  margin-left: 15px !important;
+  margin-right: 10px !important;
+  font-size: 17px;
+}
+.image-card .card-icon {
+  width: 44px;
+}
+.image-card bold {
+  font-weight: 700;
+  color: black !important;
+}
+
+.image-card2 {
+  border-radius: 0px 13px 13px 13px;
+  background-color: #ffc800 !important;
+  padding: 5px 10px;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 20 !important;
+}
+.image-card2 h5 {
+  margin-left: 15px !important;
+  margin-right: 10px !important;
+  font-size: 17px;
+  color: #fcfcfc !important;
+}
+.image-card2 bold {
+  font-weight: 800 !important;
+  color: white !important;
+}
+.image-card2 .card-icon {
+  width: 44px;
+}
+
+.micro-plans {
+  padding: 40px;
+  background-color: white;
+  border-radius: 20px;
+}
+.micro-plans h3 {
+  font-weight: 700 !important;
+}
+
+.plan-highlighted {
+  background-color: #ffc800 !important;
+  color: white !important;
+}
+.plan-highlighted h2, .plan-highlighted h4 {
+  color: white !important;
+}
+.plan-highlighted .boton1 {
+  background-color: white !important;
+  color: black;
+}
+.plan-highlighted .tick, .plan-highlighted .cross {
+  background-color: white !important;
+}
+.plan-highlighted p {
+  font-weight: 500 !important;
+}
+
+.plan {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  height: 100%;
+}
+.plan h3 {
+  font-weight: 600;
+}
+.plan h2 {
+  color: #8d8d8d;
+  margin-top: 20px !important;
+  font-size: 45px !important;
+}
+.plan h2 span {
+  font-size: 15px !important;
+}
+.plan h4 {
+  color: #636363;
+  font-size: 20px;
+  margin-top: 20px !important;
+}
+.plan p {
+  font-size: 13px;
+}
+.plan .tick {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #0aff7436;
+  padding: 5px;
+}
+.plan .cross {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  background-color: #ff270a36;
+  padding: 5px;
+}
+.plan .boton1 {
+  max-width: 100% !important;
+  border-radius: 10px;
+}
+
+.plan-select {
+  padding: 15px 40px;
+  text-decoration: none !important;
+  background-color: #ffc800;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+.plan-select p {
+  font-size: 10px;
+}
+
+.plan-select-inactive {
+  background-color: white;
+  color: #636363;
+}
+.plan-select-inactive p {
+  font-size: 10px;
+}
+
+.feature {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.searchbar {
+  border: 0px black solid;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.h-menu {
+  z-index: 200;
+  transition: 0.5s all linear;
+}
+.h-menu .bar {
+  transition: 0.2s all ease;
+  height: 3px;
+  width: 25px;
+  margin-top: 4px;
+  background-color: black;
+}
+
+.h-active {
+  transition: 0.5s all linear;
+}
+.h-active .bar {
+  background-color: white;
+}
+.h-active .bar-1 {
+  margin-top: 1px;
+  transform: rotate(45deg) !important;
+}
+.h-active .bar-3 {
+  margin-top: -2px;
+  transform: rotate(-45deg) !important;
+}
+.h-active .bar-2 {
+  background-color: #fcfcfc00 !important;
+  position: absolute;
+}
+
+.mobile-menu {
+  transition: 0.5s all ease;
+  position: fixed;
+  background-color: #000000d7;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+.mobile-menu p {
+  margin: 0px !important;
+}
+.mobile-menu .text-secondary {
+  color: white !important;
+  font-size: 30px !important;
+  margin-top: 20px !important;
+}
+.mobile-menu .nav-header-active {
+  color: #ffc800 !important;
+}
+
+/*# sourceMappingURL=index.css.map */

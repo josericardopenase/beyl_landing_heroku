@@ -1,0 +1,38 @@
+
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src = "{% static 'javascript/nav.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.0.1/dist/aos.js"></script>
+    <title>Beyl</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/logobeyl.png'  %}">
+</head>
+
+
+
+<body style="overflow-x: hidden !important">
+    {% include 'navigation/header.html' %}
+
+    <div class="container" style="max-width: 1500px;">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+    {% include 'navigation/footer.html' %}
+</body>
+
+<script>
+AOS.init({disable: 'mobile'});
+</script>
+</html>
