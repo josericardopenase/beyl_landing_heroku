@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'landing_page',
     #third party apps
     'bootstrap4',
-    'whitenoise.runserver_nostatic'
 
 ]
 
