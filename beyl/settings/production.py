@@ -134,13 +134,13 @@ STATICFILES_DIRS = [
 
 ]
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "beyl/live-static", "static_root")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "live-static", "static_root")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'beyl/live-static', 'media_root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static', 'media_root')
 #whitenoise
 
 
