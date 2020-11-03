@@ -16,6 +16,15 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 
+#AWS S3 AMAZON
+AWS_ACCESS_KEY_ID= "AKIAYEF2IPJXJTAISBM2"
+AWS_SECRET_ACCESS_KEY= "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"
+AWS_STORAGE_BUCKET_NAME = "beyl"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -44,6 +53,7 @@ INSTALLED_APPS = [
     'landing_page',
     #third party apps
     'bootstrap4',
+    'storages'
 
 ]
 
@@ -136,11 +146,12 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, "live-static", "static_root")
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
-
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static', 'media_root')
+
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 #whitenoise
 
 
