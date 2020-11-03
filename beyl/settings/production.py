@@ -134,12 +134,13 @@ STATICFILES_DIRS = [
 
 ]
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "live-static-files", "static_root")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "beyl/live-static", "static_root")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static-files', 'images')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'beyl/live-static', 'media_root')
 #whitenoise
 
 
@@ -149,7 +150,7 @@ db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
 
-CORS_REPLACE_HTTPS_REFERER      = True
+""" CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
 SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT             = True
@@ -158,4 +159,4 @@ CSRF_COOKIE_SECURE              = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
-
+ """
