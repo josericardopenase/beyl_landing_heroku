@@ -17,9 +17,9 @@ import os
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 
 #AWS S3 AMAZON
-AWS_ACCESS_KEY_ID= "AKIAYEF2IPJXJTAISBM2"
-AWS_SECRET_ACCESS_KEY= "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"
-AWS_STORAGE_BUCKET_NAME = "beyl"
+AWS_ACCESS_KEY_ID= os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY= os.environ.get('AWS_SECRET_ACCESS_KEY_ID')
+AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_BUCKET_NAME")
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
@@ -161,7 +161,7 @@ db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
 
-""" CORS_REPLACE_HTTPS_REFERER      = True
+CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
 SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT             = True
@@ -170,4 +170,4 @@ CSRF_COOKIE_SECURE              = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
- """
+
