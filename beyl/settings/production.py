@@ -134,7 +134,7 @@ STATICFILES_DIRS = [
 
 ]
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "live-static", "static_root")
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static", "static_root")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
