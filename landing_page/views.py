@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Plan, TeamMember, Feature
+from .models import Plan, TeamMember, Feature, Faq
 
 # Create your views here.
 def home(request):
@@ -38,6 +38,8 @@ def features(request):
 
 
 def faq(request):
-
-    return render(request, 'pages/faq.html')
+    context = {
+        'faqs' : Faq.objects.all()
+    }
+    return render(request, 'pages/faq.html', context)
 

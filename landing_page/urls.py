@@ -8,6 +8,6 @@ urlpatterns = [
     path('planes/<str:plan>/', plans, name="anual_plans"),
     path('team/', team, name="team" ),
     path('features/', features, name="features" ),
-    path('faq/', faq, name="faq" )
+    #path('faq/', faq, name="faq" )
     
 ]

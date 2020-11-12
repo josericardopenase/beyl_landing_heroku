@@ -46,3 +46,11 @@ class Feature(models.Model):
 
     def __str__(self):
         return self.title
+
+class Faq(models.Model):
+    title = models.CharField(max_length = 300)
+    answer = models.TextField()
+    time_stamp = models.TimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.title

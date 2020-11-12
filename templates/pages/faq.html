@@ -10,7 +10,22 @@
     COMO PODEMOS <bold>AYUDARTE</bold>
  </h1>
  <h5 class="text-secondary text-center mt-3">Estas son nuestras preguntas mas respondidas</h5>
+</div>
 
+<div class="mt-5">
+
+  {% for x in faqs %}
+
+    <div class="faq"> 
+     
+      <div class="d-flex align-items-center justify-content-between">
+        <h3> {{ x.title }} </h3>
+        <img height="20" width="20" src="{% static "images/arrow.png" %}" class="mr-3">
+      </div>
+      <p class="text-secondary mt-3" > {{ x.answer }} </p>
+
+    </div>
+  {% endfor %}
 
 </div>
 {% endblock %}

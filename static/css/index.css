@@ -295,4 +295,10 @@ bold {
   color: #ffc800 !important;
 }
 
+.faq {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
 /*# sourceMappingURL=index.css.map */
