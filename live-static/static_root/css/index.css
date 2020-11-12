@@ -55,9 +55,18 @@ bold {
   border-radius: 5px;
   font-weight: 600 !important;
   display: flex;
-  max-width: fit-content;
+  word-break: keep-all;
 }
 
+.boton3 {
+  padding: 12px 23px;
+  color: #ffc800;
+  border-radius: 5px;
+  font-weight: 600 !important;
+  display: flex;
+  max-width: fit-content;
+  border: 2px #ffc800 solid;
+}
 .boton2 {
   padding: 12px 23px;
   background-color: #ffd43846;
@@ -293,6 +302,12 @@ bold {
 }
 .mobile-menu .nav-header-active {
   color: #ffc800 !important;
+}
+
+.faq {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
 }
 
 /*# sourceMappingURL=index.css.map */
