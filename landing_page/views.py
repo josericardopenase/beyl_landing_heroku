@@ -12,7 +12,7 @@ def home(request):
 def plans(request, plan = ""):
 
     context = {
-        'plans' : Plan.objects.all().prefetch_related('features'),
+        'plans' : Plan.objects.all().prefetch_related('features').order_by('price'),
         'plan' : plan
     }
 
