@@ -202,7 +202,7 @@ bold {
 }
 .plan-highlighted .boton1 {
   background-color: white !important;
-  color: black;
+  color: black !important;
 }
 .plan-highlighted .tick, .plan-highlighted .cross {
   background-color: white !important;
