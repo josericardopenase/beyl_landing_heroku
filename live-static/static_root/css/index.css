@@ -58,6 +58,14 @@ bold {
   word-break: keep-all;
 }
 
+.boton1:hover{
+  color: red;
+}
+
+a:hover{
+  
+}
+
 .boton3 {
   padding: 12px 23px;
   color: #ffc800;

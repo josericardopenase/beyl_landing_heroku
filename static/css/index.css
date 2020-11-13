@@ -51,21 +51,56 @@ bold {
 .boton1 {
   padding: 12px 23px;
   background-color: #ffc800;
-  color: white;
+  color: white !important;
   border-radius: 5px;
   font-weight: 600 !important;
   display: flex;
   word-break: keep-all;
+  transition: 0.1s all linear;
+  border: 2px #ffc80000 solid;
+  cursor: pointer !important;
+}
+.boton3:hover, .boton1:hover{
+  text-decoration: none;
+  transform: translateY(-5px);
+  transition: 0.1s all linear;
+}
+
+.boton2:hover{
+
+  padding: 12px 23px;
+  color: #ffc800 !important;
+  border-radius: 5px;
+  font-weight: 600 !important;
+  display: flex;
+  border: 2px #ffc800 solid;
+  transition: 0.2s all linear;
+  background-color: #00000000 !important;
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+.aumento-anim:hover{
+  transform: scale(1.02);
+  transition: all 0.2s linear !important;
+}
+
+.aumento-anim{
+  transform: scale(1);
+  transition: all 0.2s linear !important;
 }
 
 .boton3 {
   padding: 12px 23px;
-  color: #ffc800;
+  color: #ffc800 !important;
   border-radius: 5px;
   font-weight: 600 !important;
   display: flex;
   max-width: fit-content;
   border: 2px #ffc800 solid;
+  transition: 0.1s all linear;
+  text-decoration: none;
+  cursor: pointer !important;
 }
 .boton2 {
   padding: 12px 23px;
@@ -74,7 +109,9 @@ bold {
   border-radius: 5px;
   font-weight: 600;
   display: flex;
-  max-width: fit-content;
+  border: 2px #ffc80000 solid;
+  transition: 0.2s all linear;
+  cursor: pointer !important;
 }
 
 .nav-header {
@@ -91,6 +128,8 @@ bold {
   background-color: white !important;
   border: 0px solid white;
   border-radius: 20px;
+  object-fit: fill !important;
+  box-sizing: content-box !important;
 }
 
 .card-icon {
@@ -216,8 +255,12 @@ bold {
   border-radius: 10px;
 }
 
+.plan-select:hover{
+  color: white;
+}
+
 .plan-select {
-  padding: 15px 40px;
+  padding: 20px 40px;
   text-decoration: none !important;
   background-color: #ffc800;
   color: white;
@@ -230,7 +273,10 @@ bold {
 .plan-select p {
   font-size: 10px;
 }
+.plan-select-inactive:hover{
 
+  color: #636363;
+}
 .plan-select-inactive {
   background-color: white;
   color: #636363;
