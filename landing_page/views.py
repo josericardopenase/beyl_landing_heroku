@@ -1,18 +1,15 @@
 from django.shortcuts import render
 from .models import Plan, TeamMember, Feature, Faq
-
-# Create your views here.
-def home(request):
-
-
-    return render(request, 'pages/home.html')
-
+from .forms import SendEmailForm
+from .models import Emails
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 def plans(request, plan = ""):
 
     context = {
-        'plans' : Plan.objects.all().prefetch_related('features').order_by('price'),
+        'plans' : Plan.objects.all().prefetch_related('features').order_by('order'),
         'plan' : plan
     }
 
@@ -43,3 +40,45 @@ def faq(request):
     }
     return render(request, 'pages/faq.html', context)
 
+
+
+
+def sendEmail(request):
+
+
+    if request.method == 'POST':
+
+        form = SendEmailForm(request.POST)
+
+
+        if form.is_valid():
+            if(Emails.objects.filter(email = form.cleaned_data['email']).first()): 
+                return HttpResponseRedirect(reverse('home'))
+
+            email_inst = Emails.objects.create(
+                email=form.cleaned_data['email'],
+                rssc= form.cleaned_data['rssc'],
+                social_media = form.cleaned_data['social_media'],
+                confirm_privacy= form.cleaned_data['confirm_privacy']
+            )
+
+            email_inst.save()
+
+            return HttpResponseRedirect(reverse('home'))
+
+        return HttpResponseRedirect(reverse('home'))
+
+
+# Create your views here.
+def home(request):
+
+    form = SendEmailForm(initial={
+        'email' : 'Inserta tu email aqui...'
+   })
+
+    return render(request, 'pages/home.html', {'form': form})
+
+
+def influencer(request):
+
+    return render(request, 'pages/influencers.html')

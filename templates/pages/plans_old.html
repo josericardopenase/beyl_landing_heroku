@@ -40,12 +40,21 @@
             {% for x in plans %}
             
         
-            <div class="col-md-6 col-lg-4 col-xl-3 mt-4 d-flex" data-aos="fade-up" data-aos-delay="1500">
+            <div class="col-md-6 col-lg-4 col-xl-3 mt-4 d-flex align-items-center" data-aos="fade-up" data-aos-duration="900">
+                <div>
+                {% if x.founder %} <div style="width: 100%; background-color:crimson; color: white; padding: 0.5rem 0.3rem; border-radius: 10px 10px 0px 0px; font-weight: 700;">OFERTA FOUNDER</div> {% endif %}
+                
+                <div class = "plan {% if x.highlight %} plan-highlighted {%endif%} d-flex flex-column justify-content-between" style="{% if x.founder %} border-radius: 0px 0px 10px 10px !important; {% endif %}">
+                    <h3>{{ x.name }} {% if x.founder %}<span style="color: #ffc600"> Founder</span> {% endif%}</h3>
 
-                <div class = "plan {% if x.highlight %} plan-highlighted {%endif%} d-flex flex-column justify-content-between">
-                    <h3>{{ x.name }}</h3>
+                    {% if x.discount != 0 %}
+
+                        <h5 style="font-size: 14px !important; margin-top: 20px !important;"><span style="    text-decoration:line-through;" class="mr-2 text-secondary">{% if plan != 'anual' %} {{x.price}} {% else %} {{x.price_anual}} {% endif %}€ </span><span style="border-radius: 50px; background-color: #ffc600; padding: 0.3rem 0.5rem; color: white;">ahorra {{x.discount}}%</span></h5>
+
+                    {% endif %}
+
                     <div>
-                        <h2>{% if x.contact %} Contacta{%else%} {% if plan != 'anual' %}   {{x.price}}€  <span>/mes</span>  {% else %} {{x.price_anual}}€ <span>/año</span> {% endif %} {%endif%}</h2>
+                        <h2>{% if x.contact %} Contacta{%else%} {% if plan != 'anual' %}   {{x.final_price}}€  <span>/mes</span>  {% else %} {{x.final_anual_price}}€ <span>/año</span> {% endif %} {%endif%}</h2>
                         
                         {% if x.contact == False %}
                             <h4>Hasta {{x.max_peaple}} clientes a la vez</h4>
@@ -82,7 +91,7 @@
                 </div>
 
             </div>
-
+</div>
             {% endfor %}
         </div>
 

@@ -1,22 +1,39 @@
 {% load static %}
 
-<div class="banner d-flex justify-content-between align-items-center"data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "500">
+<!-- <div class="banner d-flex justify-content-between align-items-center"data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "500">
     <div>
-        <h5>ACCEDE A LAS OFERTAS DE LANZAMIENTO CON SOLO DEJAR TU EMAIL 💪</h5>
+        <h5>OFERTAS FOUNDER 💪</h5>
         <p>+ Ventajas exclusivas</p>
     </div>
 
     <div class="d-flex align-items-center">
-        <p class="mr-3">El lanzamiento empiza en:</p>
+        <p class="mr-3">la oferta termina en️</p>
         <h5 id="timer">08 : 00 : 55 : 29</h5>
 
-        <a class="ml-3" href="">
+        <a class="ml-3" href="{% url 'plans' %}">
             VER OFERTAS
         </a>
     </div>
 
 
-</div>
+</div> -->
+<!-- <div class="banner d-flex justify-content-between align-items-center"data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "500">
+    <div>
+        <h5>OFERTAS FOUNDER 💪</h5>
+        <p>+ Ventajas exclusivas</p>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <p class="mr-3">la oferta termina en️</p>
+        <h5 id="timer">08 : 00 : 55 : 29</h5>
+
+        <a class="ml-3" href="{% url 'plans' %}">
+            VER OFERTAS
+        </a>
+    </div>
+
+
+</div> -->
 <nav id="header" style="z-index: 3000" data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "200" class=" p-3 d-flex justify-content-between align-items-center w-100">
 
     <a href="{% url 'home' %}"><img src="{% static 'images/beyl.svg' %}" height="40px"></img></a>
@@ -25,8 +42,8 @@
  
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
         <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
+<!--         <a href="{% url 'plans' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'plans' or request.resolver_match.url_name == 'anual_plans' %}nav-header-active{% endif %}">Planes</p></a> -->
         <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Que te ofrecemos?</p></a>
-        <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
    </div>
 
 
@@ -49,6 +66,7 @@
 
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
         <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
+<!--         <a href="{% url 'plans' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'plans' or request.resolver_match.url_name == 'anual_plans' %}nav-header-active{% endif %}">Planes</p></a> -->
         <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Que te ofrecemos?</p></a>
 
 

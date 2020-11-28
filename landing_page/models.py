@@ -3,11 +3,29 @@ from django.db import models
 class Plan(models.Model):
 
     name = models.CharField(max_length=255)
-    price = models.FloatField(null = True, blank=True)
-    price_anual = models.FloatField(null = True, blank = True)
+    price = models.IntegerField(null = True, blank=True)
+    price_anual = models.IntegerField(null = True, blank = True)
     highlight = models.BooleanField()
     max_peaple = models.IntegerField(null = True, blank=True)
     contact = models.BooleanField()
+    discount = models.IntegerField()
+    founder = models.BooleanField()
+    order = models.IntegerField()
+
+    @property
+    def final_price(self):
+        if(self.discount != 0):
+            return int(round((self.price * (100 - self.discount)) / 100 ,2))
+        else:
+            return self.price
+
+    @property
+    def final_anual_price(self):
+        if(self.discount != 0):
+            return int(round((self.price_anual * (100 - self.discount)) / 100 ,2))
+        else:
+            return self.price
+
 
     def __str__(self):
         return self.name
@@ -54,3 +72,22 @@ class Faq(models.Model):
     
     def __str__(self):
         return self.title
+
+class Emails(models.Model):
+
+    SOCIAL_MEDIA_CHOICES = [
+        ('IG', 'Instagram'),
+        ('YT', 'Youtube'), 
+        ('TW', 'Twitter'),
+        ('Tk', 'TIK TOK'),
+        ('FC', 'Facebook'),
+    ]
+
+    email = models.EmailField()
+    rssc = models.CharField(max_length=200)
+    social_media = models.CharField(choices=SOCIAL_MEDIA_CHOICES, max_length=50)
+    confirm_privacy = models.BooleanField()
+
+
+    def __str__(self):
+        return self.email
