@@ -64,9 +64,9 @@ def sendEmail(request):
 
             email_inst.save()
 
-            return HttpResponseRedirect(reverse('home'))
+            return HttpResponseRedirect(reverse('succeed'))
 
-        return HttpResponseRedirect(reverse('home'))
+        return HttpResponseRedirect(reverse('error'))
 
 
 # Create your views here.
@@ -82,3 +82,9 @@ def home(request):
 def influencer(request):
 
     return render(request, 'pages/influencers.html')
+
+def succed(request):
+    return render(request, 'pages/succed.html')
+
+def error(request):
+    return render(request, 'pages/error.html')
