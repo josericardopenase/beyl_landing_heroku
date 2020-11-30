@@ -378,3 +378,23 @@ bold {
 }
 
 /*# sourceMappingURL=index.css.map */
+@media (max-width: 800px) {
+  h1{
+    font-size: 34px !important;
+  }
+
+  .image-card{
+    margin: -20px 0px !important;
+  }
+
+  h3{
+    font-size: 20px !important;
+  }
+
+  .nav-header p{
+    font-size: 10px !important; 
+  }
+
+}
+
+
