@@ -11,6 +11,7 @@ window.onload = () => {
 
     }
 
+    console.log("hello")
 
 // Set the date we're counting down to
 

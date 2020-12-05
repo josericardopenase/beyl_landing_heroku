@@ -12,13 +12,16 @@
 
    <div class="col-md-5 ">
       <div  data-aos="fade-up" data-aos-duration="1000" style="margin-top: 100px;">
-        <h1 class="mt-3"><bold>Gestiona tus asesorias deportivas y entrenamientos personales online</bold></h1>
-        <p class="mt-3 text-secondary">¿Quieres llevar tus asesorías al siguiente nivel? ¿Mejorar tu flujo de trabajo? Ahorra tiempo y abarca mas clientes gracias a Beyl 
+        <h1 class="mt-3"><bold>Gestiona tus asesorías y entrenamientos personales online</bold></h1>
+        <p class="mt-3 text-secondary text-description">
+           ¿Quieres llevar tus asesorías al siguiente nivel? 
+           ¿Mejorar tu flujo de trabajo? 
+           ¡Ahorra tiempo y abarca mas clientes gracias a Beyl!
         </p>
       </div>  
    <form action="/sendEmail/" method='POST'>
       {% csrf_token %}
-      <p class="mt-3 text-danger" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="100"> Deja tu email para acceder a las <a href="/ofertas/" class="text-danger text-underline" style="text-decoration: underline;"> ofertas de lanzamiento </a> </p>
+      <p class="mt-3 text-danger" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="100"> Deja tu email para acceder a las <a href="{% url 'ofertas' %}" class="text-danger text-underline" style="text-decoration: underline;"> ofertas de lanzamiento </a> </p>
 
      <div class="d-flex justify-content-stretch " style="flex-wrap: wrap;">
 
@@ -29,7 +32,9 @@
 
      <div  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="900" >
          <input id='id_confirm_privacy' name='confirm_privacy'  type="checkbox" class="mt-3" id="vehicle1" name="vehicle1" value="Bike" required>
-         <label class="text-secondary" for="vehicle3"> Acepto las condiciones de privacidad</label><br>
+<!--      PONER PARA QUE CUANDO CLIQUES TE LLEVE A LAS CONDICIONES DE PRIVACIDAD -->
+         <label class="text-secondary" for="vehicle3"> Acepto las <a href="{% url 'privacidad' %}">condiciones de privacidad</a></label><br>
+
       </div>
 
    </form>
@@ -105,7 +110,7 @@
 
            <h5 class="card-title mb-3 mt-3">Aumenta tu profesionalidad</h5>
            <p class="card-text text-secondary">
-              Con nuestra herramienta podrás brindarle 
+              Podrás brindarle 
               a tus asesorados un trato mas serio y profesional, 
               sin perder la cercanía con ellos.</p>
 
@@ -207,8 +212,8 @@
       
       <div class="col-md-7" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor-placement="top-center">
 
-         <h1> <bold>Por último tus clientes podrán verlos a través de nuestra aplicación móvil.</bold></h1>
-         <h3 class="text-secondary mt-2">Desde ahí podrán usar el modo entrenamiento, contactar contigo, y guardar sus progresos.</h3>
+         <h1> <bold>Tanto tu como tus clientes tendrán acceso a nuestra app móvil </bold></h1>
+         <h3 class="text-secondary mt-2">Desde ahí podrán ver sus entrenamientos, dietas, contactar contigo, y guardar sus progresos.</h3>
 
       </div>
 

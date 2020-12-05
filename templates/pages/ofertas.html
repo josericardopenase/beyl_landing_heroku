@@ -1,0 +1,141 @@
+ 
+
+
+ {% extends 'base.html' %}
+
+ 
+ {% load static %}
+
+ {% block content %}
+
+<div  class="pt-5 pb-3 mt-5" style="  background-image:      
+   
+    url('{% static 'images/portada1.jpeg' %}'); border-radius: 20px;   background-size: cover;" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-anchor-placement="top-center
+   
+">
+
+   <div class='container text-center pt-5 pb-5 d-flex justify-content-center flex-column align-items-center'>
+      <h1 class='text-white'>
+         <bold>Ofertas prelanzamiento </bold>
+      </h1>
+      <p class="mt-3 text-white" style="max-width: 800px;">
+         Accede tan solo a estas ofertas dejando  tu email en la pagina principal. Desde que lanzemos la aplicacion al mercado te enviaremos un email para que accedas a estas.
+      </p>
+
+      <div class= "d-flex">
+
+      <a href='{% url 'home' %}' class="boton1 d-none d-lg-block mt-5 mr-2">Deja tu email</a>
+      <a href='{% url 'influencer' %}' class="boton2 d-none d-lg-block mt-5">Eres influencer</a>
+
+      </div>
+   </div>
+</div>
+
+
+ <div class="row align-items-stretch d-flex" style="margin-top: 30px;">
+
+   <div class="col-md-4 mt-4 d-flex" data-aos-delay="200" data-aos="fade-in">
+      
+      <div class="card aumento-anim">
+         
+
+
+         <div class="card-body">
+            <div class="card-icon" style="background-color: #6bffb559;">
+
+
+
+               <img class="card-img-top text-white" src="{% static 'images/icons/clock.svg' %}" width= "32" alt="Card image cap">
+            </div>
+
+           <h5 class="card-title mb-3 mt-3">Accede a la versión beta</h5>
+           <p class="card-text text-secondary">Desde que realizemos el lanzamiento de las primeras versiones serás el primero en usarlas y enterarte.</p>
+
+         </div>
+       </div>
+       
+
+   </div>
+
+   <div class="col-md-4 mt-4 d-flex" data-aos-delay="500" data-aos="fade-in">
+      
+      <div class="card aumento-anim" >
+         
+
+
+         <div class="card-body">
+            <div class="card-icon" style="background-color: #ffee0049;">
+               <img class="card-img-top" src="{% static 'images/icons/rocket.svg' %}" width= "32" alt="Card image cap">
+            </div>
+
+           <h5 class="card-title mb-3 mt-3">Grupo de discord para fundadores</h5>
+           <p class="card-text text-secondary">
+              Podrás opinar, tener decisión y contactar con otros entrenadores.
+         </p>
+
+         </div>
+       </div>
+       
+
+   </div>
+
+   <div class="col-md-4 mt-4 d-flex" data-aos="fade-in" data-aos-delay="900">
+      
+      <div class="card aumento-anim">
+         
+
+
+         <div class="card-body">
+
+            <div class="card-icon" style="background-color: #61e7ff57;">
+               <img class="card-img-top" src="{% static 'images/icons/meteor.svg' %}" width= "32" alt="Card image cap">
+            </div>
+
+            <h5 class="card-title mb-3 mt-3">Descuentos de lanzamiento</h5>
+            <p class="card-text text-secondary">
+               Conseguirás descuentos de hasta 50% cuando lanzemos la plataforma.
+            </p>
+
+         </div>
+
+       </div>
+       
+
+   </div>
+
+
+ </div>
+
+<!--
+//======================================================================================
+ Tercera parte
+ //======================================================================================
+
+-->
+<div class="mt-5 pt-5">
+
+   <div class="row align-items-center">
+
+
+
+      <div class="col-md-6" data-aos="zoom-out" data-aos-duration="1000">
+
+         <img class="card-img-top" src="{% static 'images/mockups/imagen3.png' %}" width= "100%" alt="Card image cap">
+
+      </div>
+
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1000">
+
+         <h1> <bold>Acompañamos desde el principio</bold></h1>
+         <h3 class="text-secondary mt-2">Y obten beneficios exclusivos</h3>
+
+      </div>
+   </div>
+
+
+</div>
+
+
+
+
+ {% endblock %}

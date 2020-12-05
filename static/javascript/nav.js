@@ -11,6 +11,7 @@ window.onload = () => {
 
     }
 
+    console.log("hello")
 
 // Set the date we're counting down to
 
@@ -36,7 +37,7 @@ window.onload = () => {
 }
 
 var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
+var flag = false;
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -51,10 +52,10 @@ var x = setInterval(function() {
   var hours = ("0" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).slice(-2);
   var minutes = ("0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).slice(-2);
   var seconds = ("0" + Math.floor((distance % (1000 * 60)) / 1000)).slice(-2);
-
+  var fixedHeader = document.getElementById('fixed-header')
   // Display the result in the element with id="demo"
-  document.getElementById("timer").innerHTML = days + " : " + hours + " : "
-  + minutes + " : " + seconds;
+  document.getElementById("timer").innerHTML = days + " d " + hours + " h "
+  + minutes + " m " + seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
@@ -62,3 +63,53 @@ var x = setInterval(function() {
     document.getElementById("timer").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+window.onscroll = function() {myFunction()};
+console.log(flag)
+function myFunction() {
+
+    var fixedHeader = document.getElementById('fixed-header')
+
+    if(document.body.scrollTop>200){
+        fixedHeader.classList.add('d-flex')
+        fixedHeader.classList.remove('d-none')
+        console.log(flag)
+        if(flag === false){
+
+            flag = true;
+
+            document.getElementById("fixed-header").animate([
+                // keyframes
+                { transform: 'translateY(-300px)' }, 
+                { transform: 'translateY(0px)' }
+                ], { 
+                // timing options
+                duration: 1000,
+            });
+
+        }
+
+    }else{
+        if(flag === true){
+            document.getElementById("fixed-header").animate([
+                // keyframes
+                { transform: 'translateY(0px)' }, 
+                { transform: 'translateY(-300px)' }
+              ], { 
+                // timing options
+                duration: 1000,
+            
+              }, );
+
+              flag=false;
+
+            setTimeout(function(){
+
+    
+                fixedHeader.classList.add('d-none')
+                fixedHeader.classList.remove('d-flex')
+
+            }, 900)
+        }
+    }
+}

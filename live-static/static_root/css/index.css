@@ -63,7 +63,7 @@ bold {
 .banner h5{
   font-weight: 700;
 }
-#header-active {
+#fixed-header {
   animation: 1s all linear;
   background-color:rgba(255, 255, 255, 0.959);
   position: fixed;

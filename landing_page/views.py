@@ -88,3 +88,7 @@ def succed(request):
 
 def error(request):
     return render(request, 'pages/error.html')
+
+def ofertas(request):
+    return render(request, 'pages//ofertas.html')
+

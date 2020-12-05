@@ -10,7 +10,7 @@
         <p class="mr-3">Empezamos en </p>
         <h5 id="timer">08 : 00 : 55 : 29</h5>
 
-        <a class="ml-3" href="">
+        <a class="ml-3" href="{% url 'ofertas' %}">
             VER OFERTAS
         </a>
     </div>
@@ -19,6 +19,30 @@
 </div>
 
 
+<nav id="fixed-header" style="z-index: 3000" data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "200" class="fixed-header p-3 d-none justify-content-between align-items-center w-100">
+
+    <a href="{% url 'home' %}"><img src="{% static 'images/beyl.svg' %}" height="40px"></img></a>
+
+    <div class=" align-items-center d-none d-lg-flex">
+ 
+        <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
+        <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
+        <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Qué te ofrecemos?</p></a>
+        <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
+        <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">ofertas</p></a>
+   </div>
+
+
+<div class="d-flex">
+
+      <a href='{% url 'home' %}' class="boton1 d-none d-lg-block ml-2">Deja tu email</a>
+
+</div>
+
+
+
+
+</nav>
 
 <nav id="header" style="z-index: 3000" data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "200" class=" p-3 d-flex justify-content-between align-items-center w-100">
 
@@ -28,8 +52,10 @@
  
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
         <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
-        <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Que te ofrecemos?</p></a>
+        <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Qué te ofrecemos?</p></a>
         <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
+
+        <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">ofertas</p></a>
    </div>
 
 
@@ -53,7 +79,9 @@
 
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
         <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
-        <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Que te ofrecemos?</p></a>
+        <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Qué te ofrecemos?</p></a>
 
         <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
+
+        <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">ofertas</p></a>
 </div>
