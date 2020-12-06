@@ -54,6 +54,7 @@ Pillow = "==8.0.1"
 whitenoise = "*"
 django-storages = "*"
 boto3 = "*"
+django-anymail = {extras = ["sendinblue"], version = "*"}
 
 [requires]
 python_version = "3.8"

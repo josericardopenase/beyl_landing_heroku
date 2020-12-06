@@ -379,8 +379,16 @@ bold {
   border-radius: 14px;
 }
 
+.img-margin {
+  margin-top: 120px;
+}
 /*# sourceMappingURL=index.css.map */
 @media (max-width: 800px) {
+
+  .img-margin {
+    margin-top: 20px !important;
+  }
+
   #fixed-header{
     display: none !important;
 
@@ -400,6 +408,22 @@ bold {
   .nav-header p{
     font-size: 10px !important; 
   }
+
+  .image-card h5{
+    font-size: 13px !important;
+  } 
+
+  .image-card2 h5{
+    font-size: 13px !important;
+  } 
+  
+  .card-icon {
+  background-color: #ffc800;
+  border-radius: 50%;
+  padding: 8px;
+  width: 38px !important;
+}
+
 
 }
 

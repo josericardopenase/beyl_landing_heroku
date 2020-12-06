@@ -12,7 +12,7 @@
 
    <div class="col-md-5 ">
       <div  data-aos="fade-up" data-aos-duration="1000" style="margin-top: 100px;">
-        <h1 class="mt-3"><bold>Gestiona tus asesorías y entrenamientos personales online</bold></h1>
+        <h1 class="mt-3"><bold>Gestiona tus asesorías fitness y entrenamientos personales online</bold></h1>
         <p class="mt-3 text-secondary text-description">
            ¿Quieres llevar tus asesorías al siguiente nivel? 
            ¿Mejorar tu flujo de trabajo? 
@@ -21,7 +21,7 @@
       </div>  
    <form action="/sendEmail/" method='POST'>
       {% csrf_token %}
-      <p class="mt-3 text-danger" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="100"> Deja tu email para acceder a las <a href="{% url 'ofertas' %}" class="text-danger text-underline" style="text-decoration: underline;"> ofertas de lanzamiento </a> </p>
+      <p class="mt-3 text-danger" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="100"> Deja tu email para acceder a las <a href="{% url 'ofertas' %}" class="text-danger text-underline" style="text-decoration: underline;"> ofertas founder pre-lanzamiento </a> </p>
 
      <div class="d-flex justify-content-stretch " style="flex-wrap: wrap;">
 
@@ -40,7 +40,7 @@
    </form>
    </div>
 
-   <div class="col-md-7 pr-0 pl-0" data-aos-delay="300"style="margin-top: 120px !important;" >
+<div class="col-md-7 pr-0 pl-0 img-margin" data-aos-delay="300"style="" >
 
       <div data-aos="fade-up" data-aos-delay="1600" class="d-flex position-absolute bg-light b-0 image-card align-items-center">
          <div class="card-icon">
@@ -72,7 +72,7 @@
 
 <!-- optimiza tu tiempo, facilita tu trabajo, aumenta tu profesionalidad
  -->
- <div class="row align-items-stretch d-flex" style="margin-top: 110px;">
+ <div class="row align-items-stretch d-flex img-margin">
 
    <div class="col-md-4 mt-4 d-flex" data-aos-delay="200" data-aos="fade-in">
       
@@ -155,7 +155,7 @@
  //======================================================================================
 
 -->
-<div class="mt-5 pt-5">
+<div class="mt-5 pt-md-5 pt-md-0">
 
    <div class="row align-items-center">
 
@@ -179,17 +179,12 @@
 </div>
 
 
-<div class="mt-5 pt-5">
+<div class="mt-5">
 
    <div class="row align-items-center">
 
-      <div class="col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center">
-
-         <img class="card-img-top" src="{% static 'images/mockups/ipad2.png' %}" width= "100%" alt="Card image cap">
-
-      </div>
       
-      <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor-placement="center">
+      <div class="col-md-6 mt-4 mt-md-0 order-md-2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor-placement="center">
 
          <h1> <bold>Agrega a tus asesorados y comienza a crear sus entrenamientos.</bold></h1>
          <h3 class="text-secondary mt-2">Nuestra herramienta te permite crear dietas, rutinas y realizar un seguimiento de ellos.</h3>
@@ -197,6 +192,11 @@
       </div>
 
 
+      <div class="col-md-6 order-md-1 mt-5 mt-md-0" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+
+         <img class="card-img-top" src="{% static 'images/mockups/ipad2.png' %}" width= "100%" alt="Card image cap">
+
+      </div>
 
 
    </div>
@@ -205,7 +205,7 @@
 </div>
 
 
-<div class="mt-5 pt-5">
+<div class="pt-5">
 
    <div class="row align-items-center" data-aos="fade-right" >
 

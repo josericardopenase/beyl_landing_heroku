@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'landing_page',
     #third party apps
     'bootstrap4',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
+    'anymail'
 
 ]
 
@@ -146,3 +147,9 @@ CSRF_COOKIE_SECURE              = False
 SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
+
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": os.environ.get('SEND_IN_BLUE'),
+}
+DEFAULT_FROM_EMAIL = "Beyl <hello@beylapp.com>"
+EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"

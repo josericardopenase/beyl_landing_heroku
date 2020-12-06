@@ -4,7 +4,9 @@ from .forms import SendEmailForm
 from .models import Emails
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
+from anymail.message import AnymailMessage
+from anymail.message import EmailMessage
+from django.template.loader import render_to_string
 
 def plans(request, plan = ""):
 
@@ -64,6 +66,24 @@ def sendEmail(request):
 
             email_inst.save()
 
+
+            message = EmailMessage(
+                subject="Bienvenido a Beyl",
+                to=["Nuevo usuario <" + form.cleaned_data['email'] + ">"],
+                 # single recipient...
+                # ...multiple to emails would all get the same message
+                # (and would all see each other's emails in the "to" header)
+            )
+            message.template_id = 3   # use this Sendinblue template
+            message.from_email = None  # to use the template's default sender
+            message.merge_global_data = {
+                'name': "Alice",
+                'order_no': "12345",
+                'ship_date': "May 15",
+            }
+
+            message.send()
+            
             return HttpResponseRedirect(reverse('succeed'))
 
         return HttpResponseRedirect(reverse('error'))

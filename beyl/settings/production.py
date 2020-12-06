@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'landing_page',
     #third party apps
     'bootstrap4',
-    'storages'
+    'storages',
+    'anymail'
 
 ]
 
@@ -172,3 +173,10 @@ import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
+
+
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": os.environ.get('SEND_IN_BLUE'),
+}
+DEFAULT_FROM_EMAIL ="hello@beylapp.com"
+EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"

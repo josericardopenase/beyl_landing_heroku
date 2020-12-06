@@ -6,8 +6,8 @@
 
     <div class=" align-items-center d-none d-lg-flex">
  
-        <a href="{% url 'cookies' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "cookies" %}nav-header-active{% endif %}">Politica de cookies</p></a>
-        <a href="{% url 'privacidad' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "privacidad" %}nav-header-active{% endif %}">Politica de privacidad</p></a>
+        <a href="{% url 'cookies' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "cookies" %}nav-header-active{% endif %}">Política de cookies</p></a>
+        <a href="{% url 'privacidad' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "privacidad" %}nav-header-active{% endif %}">Política de privacidad</p></a>
         <a href="{% url 'aviso_legal' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'aviso_legal' %}nav-header-active{% endif %}">Aviso legal</p></a>
 
     </div>
