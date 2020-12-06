@@ -178,5 +178,5 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 ANYMAIL = {
     "SENDINBLUE_API_KEY": os.environ.get('SEND_IN_BLUE'),
 }
-DEFAULT_FROM_EMAIL ="hello@beylapp.com"
+
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
