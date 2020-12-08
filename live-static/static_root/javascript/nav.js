@@ -11,29 +11,7 @@ window.onload = () => {
 
     }
 
-    console.log("hello")
 
-// Set the date we're counting down to
-
-
-    /* const header = document.getElementById('header')
-    header.onclick = () => console.log("he clicado")
-
-    onscroll = () => {
-
-        console.log(scrollY)
-        
-        if(scrollY > 120){
-            header.style.position = "fixed";
-            header.style.backgroundColor = "white";
-            header.style.zIndex = 300;
-        }
-        if(scrollY < 120){
-            console.log("cambiamos")
-            header.style.position = "absolute";
-            header.style.backgroundColor = "transparent";
-        }
-    } */
 }
 
 var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
@@ -65,7 +43,7 @@ var x = setInterval(function() {
 }, 1000);
 
 window.onscroll = function() {myFunction()};
-console.log(flag)
+
 function myFunction() {
 
     var fixedHeader = document.getElementById('fixed-header')
@@ -73,7 +51,6 @@ function myFunction() {
     if(document.body.scrollTop>200){
         fixedHeader.classList.add('d-flex')
         fixedHeader.classList.remove('d-none')
-        console.log(flag)
         if(flag === false){
 
             flag = true;
@@ -113,3 +90,4 @@ function myFunction() {
         }
     }
 }
+

@@ -379,8 +379,16 @@ bold {
   border-radius: 14px;
 }
 
+.img-margin {
+  margin-top: 120px;
+}
 /*# sourceMappingURL=index.css.map */
 @media (max-width: 800px) {
+
+  .img-margin {
+    margin-top: 20px !important;
+  }
+
   #fixed-header{
     display: none !important;
 
@@ -401,6 +409,36 @@ bold {
     font-size: 10px !important; 
   }
 
+  .image-card h5{
+    font-size: 13px !important;
+  } 
+
+  .image-card2 h5{
+    font-size: 13px !important;
+  } 
+  
+  .card-icon {
+  background-color: #ffc800;
+  border-radius: 50%;
+  padding: 8px;
+  width: 38px !important;
+  
+}
+
+  .boton-mobile{
+    padding: 6px 12px;
+    font-size: 15px !important;
+  }
+
+  .text-mobile{
+    font-size: 10px !important;
+  }
+
+}
+
+.estrellita{
+  
+  color: #ffc600;
 }
 
 
@@ -418,6 +456,25 @@ bold {
   background-color: #ffc600;
   width: 10%;
 }
+
+.politica h1:after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: -7px;
+  height: 4px;
+  background-color: #ffc600;
+  width: 10%;
+}
+
+.subrayado:after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: 6px;
+  height: 13px;
+  background-color: #ffc8006b;
+  width: 100%;
+}
+
 .politica p{
   font-family: Poppins !important;
   color: grey !important;
