@@ -1,8 +1,28 @@
 
+{% load static %}
 
 
-<div class="p-5" style="background-color: white !important; margin-top: 120px;">
+<div class="p-5 d-flex justify-content-center" style="background-color: white !important; margin-top: 120px; ">
+    <div class="row container"  style="max-width: 1800px !important;">
+    <div class="col-md-5 text-center text-md-left mb-md-0 mb-5">
+        <a href="{% url 'home' %}"><img src="{% static 'images/beyl.svg' %}" style="opacity: 0.3; filter: grayscale(1); filter: grayscale(30) brightness(0);" height="70px"></img></a>
+    </div>    
 
-    
-
+    <div class="col-md-7 row">
+        <div class="text-center col-md-6">
+            <h5 class="mb-4">Contenido</h5>
+            <a href="{% url 'home' %}"><p class="mb-2 text-secondary">Inicio</p></a>
+            <a href="{% url 'features' %}" ><p class="mb-2 text-secondary">¿Qué te ofrecemos?</p></a>
+            <a href="{% url 'influencer' %}"><p class="mb-2 text-secondary">¿Eres influencer?</p></a>
+            <a href="{% url 'ofertas' %}"><p class="mb-2 text-secondary">Ofertas founder</p></a>
+        </div>
+        <div class="text-center col-md-6">
+            <h5 class="mb-4">Contenido</h5>
+            <a href="{% url 'home' %}"><p class="mb-2 text-secondary">Inicio</p></a>
+            <a href="{% url 'features' %}" ><p class="mb-2 text-secondary">¿Qué te ofrecemos?</p></a>
+            <a href="{% url 'influencer' %}"><p class="mb-2 text-secondary">¿Eres influencer?</p></a>
+            <a href="{% url 'ofertas' %}"><p class="mb-2 text-secondary">Ofertas founder</p></a>
+        </div>
+    </div>    
+    </div>
 </div>
