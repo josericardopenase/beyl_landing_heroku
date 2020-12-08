@@ -466,13 +466,10 @@ bold {
   width: 10%;
 }
 
-.subrayado:after{
-  content: '';
-  position: absolute;
-  left: 0; bottom: 6px;
-  height: 13px;
-  background-color: #ffc8006b;
-  width: 100%;
+.subrayado{
+
+  color: #ffc600;
+
 }
 
 .politica p{
