@@ -10,7 +10,7 @@ urlpatterns = [
     path('influencers/', influencer, name='influencer'),
     path('succeed/', succed, name='succeed' ),
     path('error/', error, name='error' ),
-    path('ofertas/', ofertas, name='ofertas' ),
+    path('founders/', ofertas, name='ofertas' ),
     #path('faq/', faq, name="faq" )
     
 ]

@@ -8,7 +8,7 @@
 
  {% block content %}
 
-<div  class="pt-5 pb-3 mt-5" style="  background-image:      
+<div  class="pt-5 pb-3 mt-5 founders-image" style="  background-image:      
    
     url('{% static 'images/portada1.jpeg' %}'); border-radius: 20px;   background-size: cover;" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-anchor-placement="top-center
    
@@ -19,13 +19,17 @@
          <bold>Sé un <span class="subrayado position-relative">founder</span></bold>
       </h1>
       <p class="mt-3 text-white" style="max-width: 800px;">
-         Los founders son aquellos entrenadores pioneros que decidan comenzar este viaje con nosotros. Solo con dejar tu email accederás a las numerosas ventajas de este grupo.
+         Los founders son aquellos entrenadores que dejen su email antes del lanzamiento de la aplicación. Queremos recompensar a todos aquellos que confien en nosotros desde un primer momento.
       </p>
+
+        <p class="mr-3 text-white mt-3">Se acaba en </p>
+        <h5 class="timer text-white position-relative subrayado2" style="font-weight: 700; font-size: 26px;">08 : 00 : 55 : 29</h5>
+
 
       <div class= "d-flex">
 
-      <a href='{% url 'home' %}' class="boton1 d-none d-lg-block mt-5 mr-2">Deja tu email</a>
-      <a href='{% url 'influencer' %}' class="boton2 d-none d-lg-block mt-5">Eres influencer</a>
+      <a href='#formulario' class="boton1 d-lg-block mt-5 mr-md-2">Deja tu email</a>
+      <a href='{% url 'influencer' %}' class="boton2  d-none d-lg-block mt-5">Eres influencer</a>
 
       </div>
    </div>
@@ -41,13 +45,13 @@
 
          <div class="card-body">
 
-            <div class="card-icon" style="background-color: #61e7ff57;">
-               <img class="card-img-top" src="{% static 'images/icons/meteor.svg' %}" width= "32" alt="Card image cap">
+            <div class="card-icon" style="background-color: #FF3D54;">
+               <img class="card-img-top" src="{% static 'images/icons/etiqueta 1.svg' %}" width= "32" alt="Card image cap">
             </div>
 
             <h5 class="card-title mb-3 mt-3">Descuentos de pre-lanzamiento</h5>
             <p class="card-text text-secondary">
-               Conseguirás descuentos de hasta 50% cuando lanzemos la plataforma.
+               Conseguirás descuentos de hasta 50%.
             </p>
 
          </div>
@@ -63,14 +67,14 @@
 
 
          <div class="card-body">
-            <div class="card-icon" style="background-color: #6bffb559;">
+            <div class="card-icon" style="background-color: #50DE79;">
 
 
 
-               <img class="card-img-top text-white" src="{% static 'images/icons/clock.svg' %}" width= "32" alt="Card image cap">
+               <img class="card-img-top text-white" src="{% static 'images/icons/grafico 1.svg' %}" width= "32" alt="Card image cap">
             </div>
 
-           <h5 class="card-title mb-3 mt-3">Accede a la versión beta</h5>
+           <h5 class="card-title mb-3 mt-3">Acceso gratiuto a la beta</h5>
            <p class="card-text text-secondary">Desde que realizemos el lanzamiento de las primeras versiones serás el primero en usarlas y enterarte.</p>
 
          </div>
@@ -86,8 +90,8 @@
 
 
          <div class="card-body">
-            <div class="card-icon" style="background-color: #ffee0049;">
-               <img class="card-img-top" src="{% static 'images/icons/rocket.svg' %}" width= "32" alt="Card image cap">
+            <div class="card-icon" style="background-color: #039BE5; padding: 12px 10px;">
+               <img class="card-img-top" src="{% static 'images/icons/Vector.svg' %}" alt="Card image cap">
             </div>
 
            <h5 class="card-title mb-3 mt-3">Grupo de discord para fundadores</h5>
@@ -106,6 +110,50 @@
 
  </div>
 
+
+<div class="mt-5 pt-5" id="formulario">
+
+   <div class="row align-items-center">
+
+      <div class="col-md-7" data-aos="zoom-in" data-aos-duration="1000">
+
+         <img class="card-img-top" style="border-radius: 20px;" src="{% static 'images/formulario1.jpg' %}" width= "100%" alt="Card image cap">
+
+      </div>
+      
+      <div class="col-md-5 mt-4 mt-md-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor-placement="center">
+
+
+
+   <form action="/sendEmail/" class="p-md-5" method='POST'>
+      {% csrf_token %}
+      <h1> <bold>Formulario</bold></h1>
+
+
+
+      <input placeholder ="Nombre" id='id_email' name='email' type='email' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
+      <input placeholder ="Email" id='id_email' name='email' type='email' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
+      <label class="mt-3" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300"  >Has usado algun software de entrenamiento antes?</label>
+      <select  id='id_social_media' name='social_media'  class="mt-0 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px; background-color: white;" required>
+
+        <option value="IG">Si</option>
+        <option value="FB">No</option>
+
+      </select>
+      <div class="mt-5" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="700" style="margin-top: 160px;"><input type="submit" class="boton1"></input></div>
+
+     <div  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="900" >
+         <input id='id_confirm_privacy' name='confirm_privacy'  type="checkbox" class="mt-3" id="vehicle1" name="vehicle1" value="Bike" required>
+         <label class="text-secondary" for="vehicle3"> He leído y acepto los <a href="{% url 'privacidad' %}">términos y condiciones de privacidad</a></label>
+      </div>
+
+   </form>
+   </div>
+
+
+      </div>
+   
+</div>
 <!--
 //======================================================================================
  Tercera parte

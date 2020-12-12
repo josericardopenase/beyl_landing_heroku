@@ -10,8 +10,8 @@
     </div>
 
     <div class="d-flex align-items-center">
-        <p class="mr-3">Empezamos en </p>
-        <h5 id="timer">08 : 00 : 55 : 29</h5>
+        <p class="mr-3">Lanzamiento en </p>
+        <h5 class="timer">08 : 00 : 55 : 29</h5>
 
         <a class="ml-3" href="{% url 'ofertas' %}">
             SÉ UN FOUNDER
@@ -29,11 +29,11 @@
     <div class=" align-items-center d-none d-lg-flex">
  
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
-        <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
         <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Qué te ofrecemos?</p></a>
-        <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
-
         <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">Ofertas founder</p></a>
+        <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
+        <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
+
    </div>
 
 
@@ -59,11 +59,10 @@
     <div class=" align-items-center d-none d-lg-flex">
  
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
-        <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
         <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Qué te ofrecemos?</p></a>
-        <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
         <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">Ofertas founder</p></a>
-
+        <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
+        <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
    </div>
 
 
