@@ -112,3 +112,7 @@ def error(request):
 def ofertas(request):
     return render(request, 'pages//ofertas.html')
 
+
+def movil(request):
+    return render(request, 'pages/mobile_app.html')
+
