@@ -43,7 +43,7 @@
 
       <div class="col-lg-7 order-lg-2 order-1 justify-content-center d-flex flex-column">
 
-            <h1 class="mb-3" style="font-size: 50px;"><bold>Podrán llevar su rutina a cualquier parte</bold></h1>
+            <h1 class="mb-3" style="font-size: 50px;"><bold>Podrán llevar su <span class="subrayado">rutina </span>a cualquier parte</bold></h1>
             <p class="text-secondary" style="font-size: 19px;">Con funcionalidades exlusivas: </p>
             <div class="mt-4 d-flex" data-aos-delay="200" data-aos="fade-in">
                
@@ -55,7 +55,7 @@
 
                      <h5 style="padding: 0.5rem 1rem; background-color: rgb(231, 255, 219); border-radius: 50%; color: rgb(14, 194, 83)">1</h5>
 
-                     <h5 class="ml-3 card-title mb-3 mt-3">Modo entrenamiento mientras estan en el gimnasio</h5>
+                     <h5 class="ml-3 card-title mb-3 mt-3">Modo entrenamiento mientras están en el gimnasio</h5>
 
                   </div>
                </div>
@@ -73,7 +73,7 @@
 
                      <h5 style="padding: 0.6rem 1rem; background-color: rgb(255, 213, 185); border-radius: 50%; color: rgb(255, 81, 0)">2</h5>
 
-                     <h5 class="ml-3 card-title mb-3 mt-3">Videos explicativos de todos los ejercicios mas populares</h5>
+                     <h5 class="ml-3 card-title mb-3 mt-3">Vídeos explicativos de todos los ejercicios mas populares</h5>
 
 
                   </div>
@@ -110,7 +110,7 @@
  <div class="row mt-lg-5 mb-lg-5 pt-lg-5 pb-lg-5">
       <div class="col-lg-7 order-lg-1 d-flex flex-column justify-content-center">
          <div>
-            <h1 class="mb-2" style="font-size: 50px;"><bold>Tendrán acceso a su dieta en cualquier momento</bold></h1>
+            <h1 class="mb-2" style="font-size: 50px;"><bold>Tendrán acceso a su <span class="subrayado" >dieta </span>en cualquier momento</bold></h1>
 
             <p class="text-secondary" style="font-size: 23px;">Verán los macronutrientes y calorías de cada comida, así como de las recetas que les añadas</p>
       
@@ -132,7 +132,7 @@
 
    <div class="col-lg-7 order-md-2 mt-0 mt-md-5 " style="margin-top: 7rem;">
       <div  data-aos="fade-up" data-aos-duration="1000">
-       <h1 class="mt-3" style="font-size: 50px;"><bold>Podrán subir sus progresos</bold></h1>
+       <h1 class="mt-3" style="font-size: 50px;"><bold>Podrán subir sus <span class="subrayado">progresos</span></bold></h1>
 <!--        PONER DEJANOS TU EMAIL EN AMARILLO -->
         <p class="mt-3 text-secondary" style="font-size: 23px;">Podrán subir fotos, pesos, altura. Además de la posibilidad de crear objetivos para nunca perder el norte.</p>
       </div>          
@@ -154,9 +154,9 @@
 
    <div class="col-lg-7 order-md-1 mt-1 mt-md-5" style="margin-top: 7rem;">
       <div  data-aos="fade-up" data-aos-duration="1000" style="">
-       <h1 class="mt-3" style="font-size:    50px;"><bold>¿Eres influencer o micro influencer?</bold></h1>
+       <h1 class="mt-3" style="font-size:    50px;"><bold>Chatea con tus <span class="subrayado">clientes</span></bold></h1>
 <!--        PONER DEJANOS TU EMAIL EN AMARILLO -->
-        <p class="mt-3 text-secondary" style="font-size: 23px;">Valoramos tu trabajo y queremos contar con tu apoyo. Déjanos tus datos rellenando el formulario y nosotros te contactaremos.</p>
+        <p class="mt-3 text-secondary" style="font-size: 23px;">Podrás tener un trato cercano y un contacto directo con ellos gracias a un chat instantáneo.</p>
       </div>          
 
 
@@ -172,53 +172,6 @@
 
  </div>
 
-<div class="mt-lg-5 pt-lg-5" id="formulario">
-
-   <div class="row align-items-center">
-
-      <div class="col-lg-7" data-aos="zoom-in" data-aos-duration="1000">
-
-         <img class="card-img-top" style="border-radius: 20px;" src="{% static 'images/formulario1.jpg' %}" width= "100%" alt="Card image cap">
-
-      </div>
-      
-      <div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor-placement="center">
-
-
-
-   <form action="/sendEmail/" class="p-lg-5" method='POST'>
-      {% csrf_token %}
-      <h1> <bold>Formulario</bold></h1>
-
-
-
-      <input placeholder ="Email..." id='id_email' name='email' type='email' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
-      <input placeholder ="Nombre de usuario..." id='id_rssc' name='rssc' type='text' class="mt-3 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
-      <select  id='id_social_media' name='social_media'  class="mt-3 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px; background-color: white;" required>
-
-        <option value="IG">Instagram</option>
-        <option value="FB">Facebook</option>
-        <option value="TW">Twitter</option>
-        <option value="Tk">Tik tok</option>
-        <option value="YT">Youtube</option>
-      </select>
-      <div class="mt-5" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="700" style="margin-top: 160px;"><input type="submit" class="boton1"></input></div>
-
-     <div  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="900" >
-         <input id='id_confirm_privacy' name='confirm_privacy'  type="checkbox" class="mt-3" id="vehicle1" name="vehicle1" value="Bike" required>
-         <label class="text-secondary" for="vehicle3"> He leído y acepto los <a href="{% url 'privacidad' %}">términos y condiciones de privacidad</a></label>
-      </div>
-
-   </form>
-   </div>
-
-
-      </div>
-
-
-
-
-   </div>
 
 
 </div>

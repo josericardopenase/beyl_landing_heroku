@@ -83,11 +83,12 @@ class Emails(models.Model):
         ('FC', 'Facebook'),
     ]
 
+    name = models.CharField(max_length=255)
     email = models.EmailField()
     rssc = models.CharField(max_length=200)
     social_media = models.CharField(choices=SOCIAL_MEDIA_CHOICES, max_length=50)
     confirm_privacy = models.BooleanField()
-
+    has_used_other_tool = models.CharField(null=True, blank=True, max_length=6)
 
     def __str__(self):
         return self.email

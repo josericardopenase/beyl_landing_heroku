@@ -133,13 +133,14 @@
 
 
 
-      <input placeholder ="Nombre" id='id_email' name='email' type='email' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
-      <input placeholder ="Email" id='id_email' name='email' type='email' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
+      <input placeholder ="Nombre" id='id_email' max_length="255" name='name' type='text' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
+      <input placeholder ="Email" id='id_email' max_length="255" name='email' type='email' class="mt-4 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px;" required>
       <label class="mt-3" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300"  >Has usado algun software de entrenamiento antes?</label>
-      <select  id='id_social_media' name='social_media'  class="mt-0 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px; background-color: white;" required>
+      <select  id='has_used_other_tool' name='has_used_other_tool'  class="mt-0 p-2 mr-2 w-100" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="300" style="margin-top: 160px; border: none; height: auto; border-radius: 10px; background-color: white;" required>
 
-        <option value="IG">Si</option>
-        <option value="FB">No</option>
+        <option value="None">Elige una respuesta...</option>
+        <option value="True">Si</option>
+        <option value="False">No</option>
 
       </select>
       <div class="mt-5" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="700" style="margin-top: 160px;"><input type="submit" class="boton1"></input></div>

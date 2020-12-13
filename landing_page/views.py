@@ -50,6 +50,7 @@ def sendEmail(request):
 
     if request.method == 'POST':
 
+        print(request.POST)
         form = SendEmailForm(request.POST)
 
 
@@ -58,10 +59,12 @@ def sendEmail(request):
                 return HttpResponseRedirect(reverse('home'))
 
             email_inst = Emails.objects.create(
+                name= form.cleaned_data['name'],
                 email=form.cleaned_data['email'],
                 rssc= form.cleaned_data['rssc'],
                 social_media = form.cleaned_data['social_media'],
-                confirm_privacy= form.cleaned_data['confirm_privacy']
+                confirm_privacy= form.cleaned_data['confirm_privacy'],
+                has_used_other_tool = form.cleaned_data['has_used_other_tool'],
             )
 
             email_inst.save()
