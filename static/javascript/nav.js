@@ -14,7 +14,7 @@ window.onload = () => {
 
 }
 
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+var countDownDate = new Date("Feb 1, 2021 15:37:25").getTime();
 var flag = false;
 // Update the count down every 1 second
 var x = setInterval(function() {
