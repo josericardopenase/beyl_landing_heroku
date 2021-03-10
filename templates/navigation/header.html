@@ -5,16 +5,13 @@
 <div class="banner d-lg-flex justify-content-between d-none align-items-center"data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "500">
 
     <div>
-        <h5>ACCEDE A OFERTAS FOUNDER PRE-LANZAMIENTO 💪</h5>
-        <p>Tan solo con dejar tu email</p>
+        <h5>YA TENEMOS NUESTRA BETA CERRADA ACTIVA</h5>
+        <p>Apuntate gratuitamente y prueba beyl</p>
     </div>
 
     <div class="d-flex align-items-center">
-        <p class="mr-3">Lanzamiento en </p>
-        <h5 class="timer">08 : 00 : 55 : 29</h5>
-
-        <a class="ml-3" href="{% url 'ofertas' %}">
-            SÉ UN FOUNDER
+        <a class="ml-3" href="https://app.beylapp.com">
+            UNETE A LA BETA
         </a>
     </div>
 
@@ -31,7 +28,6 @@
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
         <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">Plataforma web</p></a>
         <a href="{% url 'app' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "app" %}nav-header-active{% endif %}">App móvil</p></a>
-        <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">Ofertas founder</p></a>
         <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
         <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
 
@@ -40,7 +36,8 @@
 
     <div class="d-flex">
 
-        <a href='{% url 'home' %}' class="boton1 d-none d-lg-block ml-2">Deja tu email</a>
+        <a href='https://app.beylapp.com' class="boton1 d-none d-lg-block ml-2">Entrar</a>
+        <a href='https://app.beylapp.com/register' class="boton3 d-none d-lg-block ml-2">Registrarse</a>
 
     </div>
 
@@ -53,7 +50,7 @@
 
 </nav>
 
-<div class="w-100 d-flex justify-content-center">
+<div class="w-100 d-lg-flex d-none justify-content-center">
     <nav id="fixed-header" style="z-index: 3000" data-aos ="fade-down" data-aos-duration ="600" data-aos-delay = "200" class="fixed-header pt-3 pb-3 pl-5 pr-5 d-none justify-content-between align-items-center w-100">
 
         <a href="{% url 'home' %}"><img src="{% static 'images/beyl.svg' %}" height="40px"></img></a>
@@ -63,7 +60,6 @@
             <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
             <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">Plataforma web</p></a>
             <a href="{% url 'app' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "app" %}nav-header-active{% endif %}">App móvil</p></a>
-            <a href="{% url 'ofertas' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'ofertas' %}nav-header-active{% endif %}">Ofertas founder</p></a>
             <a href="{% url 'influencer' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'influencer' %}nav-header-active{% endif %}">¿Eres influencer?</p></a>
             <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
     </div>
@@ -71,7 +67,8 @@
 
         <div class="d-flex">
 
-            <a href='{% url 'home' %}' class="boton1 d-none d-lg-block ml-2">Deja tu email</a>
+        <a href='https://app.beylapp.com' class="boton1 d-none d-lg-block ml-2">Entrar</a>
+        <a href='https://app.beylapp.com/register' class="boton3 d-none d-lg-block ml-2">Registrarse</a>
 
         </div>
 
