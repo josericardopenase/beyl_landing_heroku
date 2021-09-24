@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Plan, TeamMember, Feature, Faq
+from .models import Plan, TeamMember, Feature, Faq, Market
 from .forms import SendEmailForm, ConseguirEntrada
 from .models import Emails
 from django.http import HttpResponseRedirect, HttpResponse
@@ -144,6 +144,14 @@ def movil(request):
 
         if form.is_valid():
             #email_inst.save()
+
+            Market.objects.create(**{
+                'horario' :form.cleaned_data['horario'] ,
+                'nombre': form.cleaned_data['nombre'],
+                'apellidos': form.cleaned_data['apellidos'],
+                'edad': form.cleaned_data['edad'],
+                'email': form.cleaned_data['email'],
+            })
 
             data = {
                 'horario' :form.cleaned_data['horario'] ,
