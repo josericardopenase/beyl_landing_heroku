@@ -16,14 +16,17 @@
             <h1 style="font-size: 140px; margin-bottom: 0 !important;" >IT MARKET</h1>
         </div>
         <div style="margin-left: 30px; width: 100%; height: 100%; ">
-            <h1 style="font-size: 30px; margin-top: 0 !important; padding: 0px;">HORARIO : {{ horario }}</h1>
-            <h1 style="font-size: 30px;">NOMBRE : {{nombre}}</h1>
-            <h1 style="font-size: 30px">EDAD : {{ edad }}</h1>
-            <h1 style="font-size: 30px">MAIL : {{ mail }}</h1>
+            <h1 style="font-size: 25px; margin-top: 0 !important; padding: 0px;">HORARIO : {{ horario }}</h1>
+            <h1 style="font-size: 25px;">NOMBRE : {{nombre}}</h1>
+            <h1 style="font-size: 25px">EDAD : {{ edad }}</h1>
+            <h1 style="font-size: 25px">MAIL : {{ mail }}</h1>
             <h3>*Medidas covid: es obligatorio el uso de mascarilla en todo momento. El aforo estará limitado al 50% y es posible que
             tengas que hacer cola.</h3>
         </div>
+    </div> 
+    <div>
+        <pdf:barcode value="ENTRADA AL MARKET ITCLOSET" type="code128" humanreadable="1" align="right" />
     </div>
-<img style="position: absolute; bottom : 0; right: 0;" src="{% static 'images/negrosinnada.png' %}" height="60px"></img>
 </body>
+
 
