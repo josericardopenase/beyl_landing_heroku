@@ -348,10 +348,7 @@ bold {
   margin-top: 1px;
   transform: rotate(45deg) !important;
 }
-.bar-3{
-  width: 30px !important;
-  margin-bottom: 0px !important;
-}
+
 .h-active .bar-3 {
   margin-top: -2px;
   transform: rotate(-45deg) !important;
