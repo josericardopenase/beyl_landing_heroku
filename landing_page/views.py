@@ -1,29 +1,47 @@
 from django.shortcuts import render
 from .models import Plan, TeamMember, Feature, Faq
-from .forms import SendEmailForm
+from .forms import SendEmailForm, ConseguirEntrada
 from .models import Emails
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from anymail.message import AnymailMessage
 from anymail.message import EmailMessage
-from django.template.loader import render_to_string
+from django.template.loader import render_to_string, get_template
+from io import BytesIO
+from xhtml2pdf import pisa
+import datetime
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html  = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 def plans(request, plan = ""):
 
-    context = {
-        'plans' : Plan.objects.all().prefetch_related('features').order_by('order'),
-        'plan' : plan
+    data = {
+        'amount': 39.99,
+        'customer_name': 'Cooper Mann',
+        'order_id': 1233434,
     }
+    pdf = render_to_pdf('pages/entrada.html', data)
+    return HttpResponse(pdf, content_type='application/pdf')
 
-    return render(request, 'pages/plans.html', context)
 
 def team(request):
     
-    context = {
-        'team_members' : TeamMember.objects.all().order_by('order')
+    data = {
+        'today': datetime.date.today(), 
+        'amount': 39.99,
+        'nombre': 'Cooper Mann',
+        'edad': 20,
+        'mail': 'josericardopenase@gmail.com',
     }
-
-    return render(request, 'pages/team.html', context)
+    pdf = render_to_pdf('pages/entrada.html', data)
+    return HttpResponse(pdf, content_type='application/pdf')
 
 
 def features(request):
@@ -117,5 +135,27 @@ def ofertas(request):
 
 
 def movil(request):
-    return render(request, 'pages/mobile_app.html')
+
+    print(request.method)
+    if request.method == 'POST':
+        print(request.POST)
+        form = ConseguirEntrada(request.POST)
+
+
+        if form.is_valid():
+            #email_inst.save()
+
+            data = {
+                'horario' :form.cleaned_data['horario'] ,
+                'today': datetime.date.today(), 
+                'amount': 39.99,
+                'nombre': form.cleaned_data['nombre'],
+                'apellidos': form.cleaned_data['apellidos'],
+                'edad': form.cleaned_data['edad'],
+                'mail': form.cleaned_data['email'],
+            }
+            pdf = render_to_pdf('pages/entrada.html', data)
+            return HttpResponse(pdf, content_type='application/pdf')
+    else:
+        return render(request, 'pages/mobile_app.html')
 

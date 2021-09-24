@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9?styles=49034,49031,49033,49035,49032,49036,49038,49040,49042,49044,49037,49039,49041,49043,49045,49046');
 body {
-  font-family: "Poppins" !important;
-  background-color: #f5f5f5;
+  font-family:  "Helvetica Neue Italic 700", sans-serif !important;
+  font-weight: 800;
+  background-color: #dcdad2;
   overflow-x: hidden !important;
 
 }
@@ -331,9 +332,9 @@ bold {
 }
 .h-menu .bar {
   transition: 0.2s all ease;
-  height: 3px;
-  width: 25px;
-  margin-top: 4px;
+  height: 4px;
+  width: 38px;
+  margin-bottom: 7px;
   background-color: black;
 }
 
@@ -346,6 +347,10 @@ bold {
 .h-active .bar-1 {
   margin-top: 1px;
   transform: rotate(45deg) !important;
+}
+.bar-3{
+  width: 30px !important;
+  margin-bottom: 0px !important;
 }
 .h-active .bar-3 {
   margin-top: -2px;
@@ -461,7 +466,7 @@ bold {
 
 
 .politica h1{
-  font-family: Poppins !important;
+  font-family: Arial, Helvetica, sans-serif !important;
   font-weight: 600 !important;
   position: relative;
 }

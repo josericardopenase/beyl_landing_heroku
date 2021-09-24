@@ -55,6 +55,11 @@ whitenoise = "*"
 django-storages = "*"
 boto3 = "*"
 django-anymail = {extras = ["sendinblue"], version = "*"}
+weasyprint = "*"
+xhtml2pdf = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
